@@ -1,0 +1,12 @@
+{
+  "name": "guitar-hero",
+  "version": "1.0.0",
+  "description": "Guitar Hero",
+  "main": "server.js",
+  "author": "Juan Martín García",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.3",
+    "request": "^2.88.2"
+  }
+}
