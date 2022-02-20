@@ -21,7 +21,7 @@ exports.getUsedGuitars = function (req, res, next) {
       const $ = cheerio.load(html);
 
       // To get the information from the listing
-      $('.ui-search-result').filter(function(index) {
+      $('.ui-search-result').filter(function() {
         const id = $(this).find('.ui-search-bookmark').attr('action').split('/')[3];
         const url = $(this).find('.ui-search-link').attr('href');
         const image = $(this).find('.ui-search-result-image__element').attr('data-src');
@@ -37,7 +37,7 @@ exports.getUsedGuitars = function (req, res, next) {
           image,
           price: parseInt(price),
           title,
-          order: index + 1,
+          order: guitars.length + 1,
         });
       });
 
